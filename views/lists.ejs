@@ -1,0 +1,38 @@
+<!-- ejs means embeded javascript -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="box" id="heading">
+        <h1><%= weekDay %></h1>
+    </div>
+    <div class="box">
+      <% for (var i =0; i <addNewItem.length; i++ ){%>
+        <div class="item">
+          <input type="checkbox">
+          <p><%= addNewItem[i] %></p>
+        </div>
+
+      <% } %>
+
+      <form  action="/" method="post">
+        <input type="text" name="newItem" placeholder="add new item" autocomplete="off">
+        <button type="submit" name="button" class="button">+</button>
+      </form>
+    </div>
+    <!-- Scriplet-<%if(weekDay==="sunday"||weekDay==="monday"){%>->Scriplet
+      <h1 style="color:purple"><%= weekDay %> TO DO LIST </h1>
+    <%}else{%>
+      <p style="color:green">This is a <%= weekDay %></p>
+    <%}%> -->
+
+
+
+
+
+  </body>
+</html>
